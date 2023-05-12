@@ -46,20 +46,18 @@ function tailColorMouse() {
 
     //Cuando se apreta el btnToggle los bordes del grid desaparecen
     btnToggle.addEventListener("click", () => {
-        cells.forEach((cell) => {
-        cell.classList.toggle("activaded");
-        });
+        btnToggle.classList.toggle("active");
 
-        // if (btnToggle.classList.contains("activaded")) {
-        //     cells.forEach((cell) => {
-        //         cell.style.border = "none";
-        //     });
-        // } else {
-        //     cells.forEach((cell) => {
-        //         cell.style.borderTop = "1px solid rgb(156, 156, 156)";
-        //         cell.style.borderLeft = "1px solid rgb(156, 156, 156)";
-        //     });
-        // };
+        if (btnToggle.classList.contains("active")) {
+            cells.forEach((cell) => {
+                cell.style.border = "none";
+            });
+        } else {
+            cells.forEach((cell) => {
+                cell.style.borderTop = "1px solid rgb(156, 156, 156)";
+                cell.style.borderLeft = "1px solid rgb(156, 156, 156)";
+            });
+        };
 
     });
 
@@ -140,5 +138,4 @@ btnGrid.addEventListener("input", () => {
     tailColorMouse();
 
 });
-
 
