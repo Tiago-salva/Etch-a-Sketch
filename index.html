@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Etch a Sketch</title>
+</head>
+
+<body>
+
+    <header class="header">
+        <h1 class="title">Etch a Sketch</h1>
+    </header>
+
+    <main class="main">
+        <div class="btns-container">
+
+            <input id="btn-color" class="btns" type="color" value="#333333"></input>
+
+            <button id="btn-draw" class="btns active">
+                <span class="button_top"> Draw Mode </span></button>
+
+            <button id="bnt-eraser" class="btns">
+                <span class="button_top"> Eraser </span>
+            </button>
+
+            <button id="btn-fill" class="btns">
+                <span class="button_top"> Fill </span>
+            </button>
+
+            <button id="btn-clear" class="btns">
+                <span class="button_top"> Clear </span>
+            </button>
+
+            <button id="btn-toggle" class="btns">
+                <span class="button_top"> Toggle Grid </span>
+            </button>
+
+            <div class="btn-grid-container">
+                <input id="btn-grid" class="btn-grid" type="range" value="16" min="1" max="64"></input>
+                <label for="btn-grid" class="grid-text"></label>
+            </div>
+        </div>
+
+        <div id="grid-container"></div>
+
+    </main>
+    
+    <footer class="footer">
+            <p>Copyright © 2023 Tiago-salva</p>
+            <a href="https://github.com/Tiago-salva"> <i class="fa-brands fa-github"></i> </a>
+        </footer>
+
+        <script src="script.js" defer></script>
+</body>
+
+</html>
