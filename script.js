@@ -8,7 +8,7 @@ let gridText = document.querySelector(".grid-text");
 //Obtengo los botones
 const btnColor = document.getElementById("btn-color");
 const btnDraw = document.getElementById("btn-draw");
-const btnEraser = document.getElementById("bnt-eraser");
+const btnEraser = document.getElementById("btn-eraser");
 const btnFill = document.getElementById("btn-fill");
 const btnClear = document.getElementById("btn-clear");
 const btnToggle = document.getElementById("btn-toggle");
@@ -46,18 +46,20 @@ function tailColorMouse() {
 
     //Cuando se apreta el btnToggle los bordes del grid desaparecen
     btnToggle.addEventListener("click", () => {
-        btnToggle.classList.toggle("active");
+        cells.forEach((cell) => {
+        cell.classList.toggle("activaded");
+        });
 
-        if (btnToggle.classList.contains("active")) {
-            cells.forEach((cell) => {
-                cell.style.border = "none";
-            });
-        } else {
-            cells.forEach((cell) => {
-                cell.style.borderTop = "1px solid rgb(156, 156, 156)";
-                cell.style.borderLeft = "1px solid rgb(156, 156, 156)";
-            });
-        };
+        // if (btnToggle.classList.contains("activaded")) {
+        //     cells.forEach((cell) => {
+        //         cell.style.border = "none";
+        //     });
+        // } else {
+        //     cells.forEach((cell) => {
+        //         cell.style.borderTop = "1px solid rgb(156, 156, 156)";
+        //         cell.style.borderLeft = "1px solid rgb(156, 156, 156)";
+        //     });
+        // };
 
     });
 

@@ -146,6 +146,11 @@ body {
     background: var(--button_outline_color);
 }
 
+.activaded {
+    border-top: none;
+    border-left: none;
+}
+
 .btn-grid-container {
     display: flex;
     justify-content: center;
